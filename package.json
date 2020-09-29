@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": " jest --testTimeout=10000 --runInBand --detectOpenHandles",
+    "coverage": " jest --coverage && cat ./coverage/lcov.info | coveralls",
     "start-dev": "nodemon index.js"
   },
   "author": "temitayo",
@@ -16,6 +17,7 @@
     ]
   },
   "devDependencies": {
+    "coveralls": "^3.1.0",
     "cross-env": "^7.0.2",
     "jest": "^26.4.2",
     "supertest": "^5.0.0"
