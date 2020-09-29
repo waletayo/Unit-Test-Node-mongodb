@@ -1,25 +1,18 @@
 language: node_js
-
 node_js:
-- 'stable'
+- stable
 install: npm install
 services:
 - mongodb
 before_script:
 - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 script: npm test --detectOpenHandles
-#after_success: npm run coverage --detectOpenHandles
 branches:
   only:
   - master
-#  - dev
 deploy:
   provider: heroku
   api_key:
-    secure: Jz0W8yi3UqCIQL8QtW7pdhfeztIbwukJVIhmKG/tjbxqspFsHgXpBytSmF3Fu20S541rGvCwEpL6BdCjyajmKV0gLYBFt9MEjfe/kTbdx8+wJ3CBeq5kHY/iDeZqwSdETHMpU5NB6fTiqL3SBf3nardVW8Ci/fgnLdd2QWk04TSEJFfSf05Bv16a+mLyymEgCTYyvHV6JCOavzRbuX1dTpjBa2sW/E9HM2QSZiwBeT7rgFkqkWLPVLGC386Ux5FYNOx41N5TEr08EoZDawFzkFjkFtUwb0CyIANGGJRIxNZ3PifuvdiQ4hLFj7iicxiXwBB9MtXvho9Ae9trfCVYmbGq3Tvc8y2yABJPnsaWbCpZ+hVbypuV5sM03lmt1/cn78IrsCR2o5HLYbhEB2aABflFubmCgaE6Vsmg0RiG/r56pbP8noFphKhheFIVAUp36tV/sPklsgFojccbc3VmdiCDAnHw4iQvb+i5J1SHOJvfHnaZRBwIr/BxwHAVGqsePxJcIHpp+6NL01Kp8ZRbiJjJmnbGjN4Ypb+NWvo9eBnN6Bfa9Sp2/oHOoLZW6IJ5gy/eGwG+4pKaFLw0gLs1Ea8BvdMBsWjk5nCWzVdzXmPHV/LoIFB44NIe/pD/YyXUSxlZ/L50h59DkmIxxCHzUJJhq6E/QCjygRXbuTqfOuI=
+    secure: D3auaJ6w0R0qlRSGwAJQcjnA5a5ZTPlBSqMcAd0CsPnacPE8mLJU0nq8tmyrTKF2teSfp8ujLAg7uyzGKVqUJ9i/ZEtMkqcJkMUnluLtu4DR9Q/3N6IK6zdTi/HIV0kP1uC+G6AbHdhrzL/4/s0G6lBwTN8PpJ5zwnLUx/aQusSUNr2o/hiU6Yfltf505PVthaHvNSlo0MGfJ/Er1NubxuXG1Fqh3TBFSEHi94sCf6MqhgrmvzT5tHnjfmE7aLw6LmwYBlLT3HK0nDIGtA7n3iTiC1gOpruBIHIymKpopZetTkYkGgw/oQOYMiahYGgm+9LZXgHk+DFJ8yqzDW/iEo2oAIaCX9JRodspq8eDU+EETDutLWdYQ9L7MFB7HrllD7dehv+GoOchHetoriQYnesBtmdCz9BuE2S6yteh4uVNyBRiL/Z/mBpiHv/nGtPSFJKXwsuWfqSV81qBgPZ1/m4tzPPRSnq6RGk9lDFkAwMtHk7ks+htCmsdipKiy66/9m73FA75urgYlL4PWB5cnrst/LdylGSPvFH5YiWB0vM0Te6BFcphIGXFhF3SpwLI/OFwVHjDvuW9VGV65/Py6qIJqh9ZDp0UV/UJNhZFw5XJi9qmtDkW+Y1Sfv0OwapyQHo6ZAUdup+g6GTgYMCo7YBpwOX3PIG/WS5Fk9ILH6Q=
   app:
     master: warm-scrubland-60852
-
-#    dev: node-hello-world-staging
-
-
