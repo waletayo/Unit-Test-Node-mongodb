@@ -14,5 +14,4 @@ deploy:
   provider: heroku
   api_key:
     secure: D3auaJ6w0R0qlRSGwAJQcjnA5a5ZTPlBSqMcAd0CsPnacPE8mLJU0nq8tmyrTKF2teSfp8ujLAg7uyzGKVqUJ9i/ZEtMkqcJkMUnluLtu4DR9Q/3N6IK6zdTi/HIV0kP1uC+G6AbHdhrzL/4/s0G6lBwTN8PpJ5zwnLUx/aQusSUNr2o/hiU6Yfltf505PVthaHvNSlo0MGfJ/Er1NubxuXG1Fqh3TBFSEHi94sCf6MqhgrmvzT5tHnjfmE7aLw6LmwYBlLT3HK0nDIGtA7n3iTiC1gOpruBIHIymKpopZetTkYkGgw/oQOYMiahYGgm+9LZXgHk+DFJ8yqzDW/iEo2oAIaCX9JRodspq8eDU+EETDutLWdYQ9L7MFB7HrllD7dehv+GoOchHetoriQYnesBtmdCz9BuE2S6yteh4uVNyBRiL/Z/mBpiHv/nGtPSFJKXwsuWfqSV81qBgPZ1/m4tzPPRSnq6RGk9lDFkAwMtHk7ks+htCmsdipKiy66/9m73FA75urgYlL4PWB5cnrst/LdylGSPvFH5YiWB0vM0Te6BFcphIGXFhF3SpwLI/OFwVHjDvuW9VGV65/Py6qIJqh9ZDp0UV/UJNhZFw5XJi9qmtDkW+Y1Sfv0OwapyQHo6ZAUdup+g6GTgYMCo7YBpwOX3PIG/WS5Fk9ILH6Q=
-  app:
-    master: warm-scrubland-60852
+  app: warm-scrubland-60852
