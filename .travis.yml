@@ -6,7 +6,6 @@ install: npm install
 services:
 - mongodb
 before_script:
-- sleep 15
 - mongo testdb
 script: npm test
 after_success: npm run coverage
