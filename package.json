@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": " jest --testTimeout=10000 --runInBand --detectOpenHandles --forceExit",
-    "coverage": " jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "coverage": " jest --coverage && cat ./coverage/lcov.info | coveralls --detectOpenHandles",
     "start-dev": "nodemon index.js"
   },
   "author": "temitayo",
