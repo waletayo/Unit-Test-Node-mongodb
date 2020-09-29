@@ -39,5 +39,9 @@ describe('Post Endpoint', () => {
         const res = await request(postApi).delete(`/api/post/delete?post_id=${postId}`);
         expect(res.statusCode).toEqual(200)
     });
+    afterAll(done => {
+        postApi.close();
+        done();
+    });
 
 });
