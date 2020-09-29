@@ -6,7 +6,7 @@ install: npm install
 services:
 - mongodb
 before_script:
-- mongo testdb
+- mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 script: npm test
 after_success: npm run coverage
 
