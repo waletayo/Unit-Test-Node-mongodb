@@ -9,5 +9,17 @@ before_script:
 - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 script: npm test --detectOpenHandles
 #after_success: npm run coverage --detectOpenHandles
+branches:
+  only:
+  - master
+#  - dev
+deploy:
+  provider: heroku
+  api_key:
+    secure: Jz0W8yi3UqCIQL8QtW7pdhfeztIbwukJVIhmKG/tjbxqspFsHgXpBytSmF3Fu20S541rGvCwEpL6BdCjyajmKV0gLYBFt9MEjfe/kTbdx8+wJ3CBeq5kHY/iDeZqwSdETHMpU5NB6fTiqL3SBf3nardVW8Ci/fgnLdd2QWk04TSEJFfSf05Bv16a+mLyymEgCTYyvHV6JCOavzRbuX1dTpjBa2sW/E9HM2QSZiwBeT7rgFkqkWLPVLGC386Ux5FYNOx41N5TEr08EoZDawFzkFjkFtUwb0CyIANGGJRIxNZ3PifuvdiQ4hLFj7iicxiXwBB9MtXvho9Ae9trfCVYmbGq3Tvc8y2yABJPnsaWbCpZ+hVbypuV5sM03lmt1/cn78IrsCR2o5HLYbhEB2aABflFubmCgaE6Vsmg0RiG/r56pbP8noFphKhheFIVAUp36tV/sPklsgFojccbc3VmdiCDAnHw4iQvb+i5J1SHOJvfHnaZRBwIr/BxwHAVGqsePxJcIHpp+6NL01Kp8ZRbiJjJmnbGjN4Ypb+NWvo9eBnN6Bfa9Sp2/oHOoLZW6IJ5gy/eGwG+4pKaFLw0gLs1Ea8BvdMBsWjk5nCWzVdzXmPHV/LoIFB44NIe/pD/YyXUSxlZ/L50h59DkmIxxCHzUJJhq6E/QCjygRXbuTqfOuI=
+  app:
+    master: warm-scrubland-60852
+
+#    dev: node-hello-world-staging
 
 
