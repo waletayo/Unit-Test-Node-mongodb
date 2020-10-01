@@ -7,6 +7,7 @@ const newtestschema = new Schema({
     },
     postId: {
         type: String,
+        required: true
     },
     title: {
         type: String
